@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 html,
@@ -23,9 +22,8 @@ header {
 
 ul {
     list-style: none;
-    padding-left: 0;
     text-align: center;
-    padding: 15px;
+    padding: 30px;
     color: black;
 }
 
@@ -58,7 +56,7 @@ h1 a,
 }
 
 .top nav {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .top nav li {
@@ -79,6 +77,10 @@ h1 a,
     flex-direction: row;
 }
 
+.section img {
+    width: 100%;
+}
+
 h4 {
     text-align: center;
     font-size: larger;
@@ -86,13 +88,8 @@ h4 {
     padding-right: 25px;
 }
 
-p {
-    font-size: larger;
-    text-align: center;
-    padding: 25px;
-}
-
 #portfolio {
+    width: 100%;
     padding: 10px;
     text-align: center;
 }
