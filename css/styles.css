@@ -122,6 +122,8 @@ h4 {
 
 .intro {
     text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .paragraph {
@@ -147,9 +149,10 @@ footer {
     padding: 0 20px;
     height: 100px;
     background-color: #fafafa;
+    margin: auto;
 }
 
-.full {
+.foot {
     display: none;
 }
 
@@ -191,8 +194,8 @@ footer {
     flex-basis: calc(50%-20px);
 }
 
-.full {
-    display: ;
+.foot {
+    align-self: flex-start;
     margin-left: 20px;
 }
 
