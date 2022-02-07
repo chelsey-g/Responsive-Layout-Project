@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
-        <title>Responsive Layout</title>
+
     </head>
     <title>Responsive Layout</title>
 </head>
@@ -19,12 +19,15 @@
     <!--Navigation/Main Header-->
     <header>
         <nav>
-            <h1><a href="#">Chelsey Gowac</a></h1>
+            <div id="home">
+                <h1>Chelsey Gowac</h1>
+            </div>
             <ul class="top-nav">
                 <li><a href="#">home</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
+            </div>
         </nav>
         <div class="intro">
             <img class="profile-picture" src="images/responsive-layout-profile.png" alt="profile picture">
@@ -32,7 +35,9 @@
             </p>
         </div>
     </header>
-    <h1>PORTFOLIO</h1>
+    <div id="portfolio">
+        <h3>Portfolio</h3>
+    </div>
     <div class="container">
         <div class="section">
             <img class="Portfolio" src="images/portfolio-1.png" alt "#">
@@ -79,7 +84,9 @@
 
     <!--Footer-->
     <footer>
-        <h2>Chelsey Gowac</h2>
+        <div id="contact">
+            <h2>Chelsey Gowac</h2>
+        </div>
         <ul class="footer-nav">
             <li><a class="back-to-top" href="#nav">back to top</a></li>
             <li class="foot"><a href="#home">home</a></li>

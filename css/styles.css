@@ -39,7 +39,6 @@ nav {
     font-weight: 400;
     color: black;
     letter-spacing: .05em;
-    background-color: #fafafa;
 }
 
 h1,
@@ -170,10 +169,12 @@ footer {
         margin-right: 0;
     }
     .top-nav a {
-        color: #fff;
+        color: #00000;
     }
     .intro {
-        flex-direction: left;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: initial;
     }
 }
 
@@ -195,6 +196,7 @@ footer {
 }
 
 .foot {
+    display: flex;
     align-self: flex-start;
     margin-left: 20px;
 }
@@ -213,13 +215,16 @@ footer {
     .top-nav li {
         width: initial;
         margin-bottom: 0;
-    }
-    
-    .col {
-        flex-basis: (33.333% - 20px);
+        color: rgb(0, 0, 0);
     }
     
     .section {
         max-width: 280px;
+    }
+    
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
