@@ -1,6 +1,7 @@
-* {
+    * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 html,
@@ -11,13 +12,13 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    color: black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     background-color: #ffffff;
 }
 
-header {
-    margin: 0;
+header,
+footer {
+    width: 100%;
 }
 
 ul {
@@ -29,12 +30,11 @@ ul {
 
 a {
     text-decoration: none;
-    text-transform: uppercase;
     color: black;
 }
 
 nav {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-weight: 400;
     color: black;
     letter-spacing: .05em;
@@ -44,6 +44,7 @@ h1,
 .topnav {
     padding-top: 20px;
     text-align: center;
+    font-weight: 500;
 }
 
 .top nav,
@@ -57,7 +58,7 @@ h1 a,
 }
 
 .top nav {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .top nav li {
@@ -91,9 +92,19 @@ h4 {
     padding-right: 25px;
 }
 
-#portfolio {
+h2 {
+    font-size: 12px;
+    padding-right: 50px;
+}
+
+.portfolio {
     width: 100%;
     padding: 10px;
+    text-align: center;
+}
+
+.contact {
+    padding: 15px;
     text-align: center;
 }
 
@@ -112,15 +123,9 @@ h4 {
     display: flex;
 }
 
-.contact {
-    padding: 15px;
-    text-align: center;
-}
-
 .intro {
+    padding-top: 10px;
     text-align: center;
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 .paragraph {
@@ -138,17 +143,34 @@ h4 {
     padding: 7px;
 }
 
-footer {
-    background-color: #fafafa;
+.footer-nav {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 15px;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+.foot {
+    display: none;
+}
+
+.footer-name {
+    padding-right: 10px;
 }
 
 .back-to-top {
-    display: none;
+    flex-direction: row-reverse;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+footer {
+    background-color: #fafafa;
+    flex-direction: row;
+    padding: 30px 15px;
 }
 
 @media (min-width: 768px) {
@@ -157,7 +179,7 @@ footer {
     }
     .top-nav li {
         display: inline-block;
-        width: auto;
+        width: initial;
         margin-right: 15px;
         background-color: transparent;
     }
@@ -185,44 +207,56 @@ footer {
     .col {
         flex-basis: calc(50%-20px);
     }
+    .footer-name {
+        position: absolute;
+    }
     .foot {
-        display: none;
-        align-self: flex-start;
+        display: inline-block;
+        align-self: center;
         margin-left: 20px;
         width: auto;
-    }
-    .back-to-top {
-        display: flex;
-    }
-}
-
-@media (min-width: 1024px) {
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .top-nav,
-    .top-nav li {
-        width: initial;
-        margin-bottom: 0;
-        color: rgb(0, 0, 0);
-    }
-    .section {
-        max-width: 280px;
-    }
-    .intro {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .foot {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        min-height: 100%;
     }
     .back-to-top {
         display: none;
     }
-}
+    @media (min-width: 1024px) {
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-nav,
+        .top-nav li {
+            width: initial;
+            margin-bottom: 0;
+        }
+        .section {
+            max-width: 280px;
+        }
+        .profile-picture {
+            width: 100%;
+            margin: auto;
+            display: flex;
+        }
+        .intro {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: initial;
+            padding-top: 15px;
+        }
+        .col {
+            flex-basis: calc(33.333% - 20px);
+        }
+        .foot {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #footer-name {
+            display: flex;
+        }
+        .back-to-top {
+            display: none;
+        }
+    }
